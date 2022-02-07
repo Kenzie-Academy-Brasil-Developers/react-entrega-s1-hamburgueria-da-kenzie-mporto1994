@@ -24,9 +24,16 @@ header{
     justify-content:center;
     align-items: center;
     flex-wrap: wrap;
+    
 }
 header p{
-    color:;
-    font-weight: ;
-    font-size: ;
+    color:#333333;
+    font-weight: 600;
+    font-size: 20px;
+}
+header span{
+    color:#EB5757
+    ;
+    font-weight: 600;
+    font-size: 14px;
 }

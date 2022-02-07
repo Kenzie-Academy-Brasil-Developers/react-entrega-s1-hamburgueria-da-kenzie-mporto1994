@@ -1,0 +1,10 @@
+.listDiv{
+    margin: 50px 0px 0px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* scroll-behavior:smooth; */
+    overflow: scroll;
+    width: 400px;
+}

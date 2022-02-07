@@ -2,11 +2,11 @@ import {useState, useEffect} from "react"
 import "./styles.css"
 import {ProductCard} from "../ProductCard"
 
-export const ProductsList = ({prop}) => {
+export const ProductsList = ({prop,func}) => {
     // console.log(prop)
     return(
-        <div>
-            {prop.map((product, index)=><ProductCard key={index} prod={product}/>)}
+        <div className="listDiv">
+            {prop.map((product, index)=><ProductCard key={index} prod={product} func={func}/>)}
         </div>
     )
 }
