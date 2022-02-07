@@ -37,3 +37,8 @@ header span{
     font-weight: 600;
     font-size: 14px;
 }
+@media (min-width:1000px){
+    header{
+        justify-content: space-between;
+    }
+}

@@ -13,6 +13,7 @@ export const Cart = ({removeAll,prop,cartProducts,removeItem}) => {
             <div className="cartHeaderDiv">
                 <h2>Carrinho de Compras</h2>
             </div>
+            <div className="allCart">
             <div className="productsDiv">
                 {prop.map((prodCart,index)=>{
                 return(
@@ -32,10 +33,11 @@ export const Cart = ({removeAll,prop,cartProducts,removeItem}) => {
                 <div className="removeDiv">
                     <div className="totalDiv">
                         <p>Total</p>
-                        <p>R$<span>{cartProducts.reduce((total,acc)=>(total+=acc.price),0)}</span></p>
+                        <p>R$<span>{(cartProducts.reduce((total,acc)=>(total+=acc.price),0)).toFixed(2)}</span></p>
                     </div>
                     <button onClick={()=>removeAll()}>Remover todos</button>
                 </div>
+            </div>
             </div>
         </div>
     )

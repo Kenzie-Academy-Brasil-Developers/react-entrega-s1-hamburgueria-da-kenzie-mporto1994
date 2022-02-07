@@ -1,8 +1,11 @@
 import {useState, useEffect} from "react"
 import "./styles.css"
 import {Button} from "../Button"
+
 export const Header = ({search}) => {
+
     const[word,setWord]=useState("")
+    
     return(
         <header>
             <p>Burguer <span>Kenzie</span></p>

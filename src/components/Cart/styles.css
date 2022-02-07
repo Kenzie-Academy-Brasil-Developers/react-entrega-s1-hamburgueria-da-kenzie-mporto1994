@@ -4,21 +4,24 @@
     border: none;
     border-radius: 5px;
     margin: 30px 0px 40px 0px;
-    overflow-x: hidden;
-    padding: 20px;
+    /* overflow-x: hidden; */
+    /* padding: 20px; */
 }
 .cartHeaderDiv{
     height: 65px;
+    width: 365px;
     background-color: #27AE60;
     display: flex;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 20px;
 }
 .cartHeaderDiv h2{
     color: #FFF;
     font-size: 18px;
     font-weight: 700;
+    padding-left: 20px;
 }
 
 .prodDiv{
@@ -83,7 +86,15 @@
 .removeDiv{
     border-top: 2px solid #E0E0E0;
     margin:20px 0px 20px 0px;
+    
 }
+
+.allCart{
+    padding: 10px;
+
+}
+
+
 .totalDiv{
     display: flex;
     justify-content: center;

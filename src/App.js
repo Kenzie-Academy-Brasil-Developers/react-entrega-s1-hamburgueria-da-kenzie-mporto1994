@@ -42,7 +42,7 @@ function App() {
       <div className='Container'>
         <Header search={search}/>
         <body>
-          <ProductsList prop={filteredProducts} func={AddToCart}/> 
+          <ProductsList prop={products} func={AddToCart}/> 
           <Cart removeAll={removeAll} prop={cartProducts} removeItem={removeItem}cartProducts={cartProducts}/>
         </body>
       </div>
