@@ -15,7 +15,7 @@ export const ProductCard = ({prod,func}) => {
             <div className="dataDiv">
                 <h3>{prod.name}</h3>
                 <p className="categoryP">{prod.category}</p>
-                <p className="priceP">R$ <span>{(prod.price).tofixed(2)}</span></p> 
+                <p className="priceP">R$ <span>{(prod.price).toFixed(2)}</span></p> 
                 <Button content="Adicionar" func={func} funcParams={prod}/>
             </div>
             
