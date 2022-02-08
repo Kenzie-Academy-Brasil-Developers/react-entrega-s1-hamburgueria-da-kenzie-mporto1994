@@ -3,7 +3,7 @@ import "./styles.css"
 import {ProductCard} from "../ProductCard"
 
 export const ProductsList = ({prop,func}) => {
-    // console.log(prop)
+    console.log("ProductList  ",prop)
     return(
         <div className="listDiv">
             {prop.map((product, index)=><ProductCard key={index} prod={product} func={func}/>)}

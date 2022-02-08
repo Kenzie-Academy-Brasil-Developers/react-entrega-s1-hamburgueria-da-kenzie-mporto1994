@@ -15,7 +15,7 @@ function App() {
     .then((response)=> response.json())
     .then((response)=>setProducts(response))
     .catch((err)=> console.log(err))
-  },[products,cartProducts])
+  },[])
 
 
   const AddToCart = (product) => {
@@ -23,9 +23,7 @@ function App() {
   }
 
   const removeItem= (index) => {
-    let newList = cartProducts;
-    newList.splice(index,1)
-    setCartProducts(newList)
+    setCartProducts(cartProducts.filter((item,index2)=>index2!==index))
   }
 
   const removeAll=()=>{
@@ -33,10 +31,9 @@ function App() {
   }
 
   const search = (word) =>{
-    setFilteredProducts(products.filter((item)=>item.category.toLowercase()===word.toLowercase()||item.name.toLowercase()===word.toLowercase()))
+    setFilteredProducts(products.filter((item)=>item.category.toLowerCase()===word.toLowerCase()||item.name.toLowerCase()===word.toLowerCase()))
     
   }
-  console.log(filteredProducts)
 
   return (
     <div className="App">
@@ -45,7 +42,7 @@ function App() {
         <body>
           
           <ProductsList prop={filteredProducts.length===0?products:filteredProducts} func={AddToCart}/> 
-          <Cart removeAll={removeAll} prop={cartProducts} removeItem={removeItem}cartProducts={cartProducts}/>
+          <Cart removeAll={removeAll} prop={cartProducts} removeItem={removeItem} cartProducts={cartProducts}/>
         </body>
       </div>
       
