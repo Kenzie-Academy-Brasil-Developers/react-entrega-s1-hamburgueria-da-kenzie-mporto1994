@@ -12,12 +12,12 @@ export const Header = ({search}) => {
             
             <div className="PesquisarDiv">
                 <input 
-                type="text" 
-                placeholder="Digitar sua Pesquisa"
-                value={word}
-                onChange={(event)=>setWord(event.target.value)}
+                    type="text" 
+                    placeholder="Digitar sua Pesquisa"
+                    value={word}
+                    onChange={(event)=>setWord(event.target.value)}
                 />
-                <Button content="pesquisar" func= {search} funcParams={word}/>
+                <Button content="pesquisar" func= {()=>search(word)} />
             </div>
         </header>
     )

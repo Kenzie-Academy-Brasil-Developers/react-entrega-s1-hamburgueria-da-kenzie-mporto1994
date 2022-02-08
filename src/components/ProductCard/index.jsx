@@ -16,7 +16,7 @@ export const ProductCard = ({prod,func}) => {
                 <h3>{prod.name}</h3>
                 <p className="categoryP">{prod.category}</p>
                 <p className="priceP">R$ <span>{(prod.price).toFixed(2)}</span></p> 
-                <Button content="Adicionar" func={func} funcParams={prod}/>
+                <Button content="Adicionar" func={()=>func(prod)} />
             </div>
             
         </div>

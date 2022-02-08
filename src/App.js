@@ -7,7 +7,7 @@ import { Cart } from './components/Cart';
 function App() {
   const [products,setProducts]=useState([])
   const [cartProducts,setCartProducts]=useState([])
-  const [filteredProducts,setFilteredProducts]=useState(products)
+  const [filteredProducts,setFilteredProducts]=useState([])
 
 
   useEffect(()=>{
@@ -33,16 +33,18 @@ function App() {
   }
 
   const search = (word) =>{
-    setFilteredProducts(filteredProducts.filter((item)=>item.category.includes(word)||item.name.includes(word)))
+    setFilteredProducts(products.filter((item)=>item.category.toLowercase()===word.toLowercase()||item.name.toLowercase()===word.toLowercase()))
     
   }
+  console.log(filteredProducts)
 
   return (
     <div className="App">
       <div className='Container'>
         <Header search={search}/>
         <body>
-          <ProductsList prop={products} func={AddToCart}/> 
+          
+          <ProductsList prop={filteredProducts.length===0?products:filteredProducts} func={AddToCart}/> 
           <Cart removeAll={removeAll} prop={cartProducts} removeItem={removeItem}cartProducts={cartProducts}/>
         </body>
       </div>

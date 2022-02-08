@@ -4,7 +4,7 @@ import "./styles.css"
 export const Button = ({content , func, funcParams}) => {
 
     return(
-        <button className="buttonC" onClick={()=>func(funcParams)}>
+        <button className="buttonC" onClick={func}>
             {content}
         </button>
     )
