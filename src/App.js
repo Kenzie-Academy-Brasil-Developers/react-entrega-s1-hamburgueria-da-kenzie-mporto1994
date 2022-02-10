@@ -19,7 +19,18 @@ function App() {
 
 
   const AddToCart = (product) => {
-    setCartProducts([...cartProducts, product])
+    console.log(product)
+    let contain=false
+    cartProducts.map((item)=>{
+      if(item.name===product.name){
+        contain=true
+      }
+
+    })
+    if(contain===false){
+      setCartProducts([...cartProducts, product])
+    }
+    
   }
 
   const removeItem= (index) => {
